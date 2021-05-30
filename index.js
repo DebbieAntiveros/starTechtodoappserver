@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
-// require("dotenv").config();
+require("dotenv").config();
 
 //middleware
 app.use(cors());
@@ -231,10 +231,6 @@ app.get("/joinTodo", async (req, res) => {
   }
 });
 
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
-// app.listen(PORT);
-
-app.listen(5000, () => {
-  console.log(`Connected to the Server`);
-});
+app.listen(PORT);
